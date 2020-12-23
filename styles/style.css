@@ -1,3 +1,25 @@
-.div {
-    background:red;
-}
+* {
+    box-sizing: border-box;
+  }
+  
+  .col-3 {
+    height: 100px;
+    width: 33.333%; /* Можно задать любую другую ширину блока */
+    background: grey;
+    margin: .5rem;
+    display: flex;
+  }
+  
+  .row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+  }
+
+  .adding {
+      margin: auto;
+  }
+
+  
