@@ -6,10 +6,14 @@ const  getIn = document.getElementById('inEncrypt'), // тут наша херь
        getHelp = document.getElementById('help'),
        getOut = document.getElementById('outEncrypt'),
        userInsert = document.getElementById('userInsert'),
-       getValue = document.getElementById('getValue'); // тут шифр
+       getValue = document.getElementById('getValue'),
+       getInUnecnrypt = document.getElementById('inUnencrypt'),
+       getOutUnencrypt = document.getElementById('outUnencrypt');
 
-let offset = 0;
+let offset = 0; //сдвиг шифрования
 
+
+//достаем значение юзера с формы
 
 userInsert.addEventListener('submit', (e)=>{
 
@@ -46,6 +50,22 @@ getIn.addEventListener('input', ()=>{
     //получаем результат
     getOut.innerHTML = out;
 
+
+    //Дешифруем
+
+    getInUnecnrypt.addEventListener('input',()=>{
+
+        let str = getInUnecnrypt.value;
+        let out = '';
+        for(let i = 0; i<str.length;i++){
+            let code = str.charCodeAt(i);
+            code = code-offset; //сдвигаем
+            out+= String.fromCharCode(code);
+        }
+
+        getOutUnencrypt.innerHTML = out;
+
+    });
 
  });
 

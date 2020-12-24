@@ -9,6 +9,24 @@
     margin: .5rem;
     display: flex;
   }
+
+  .col-2 {
+    height:100px;
+    width: 50%; /* Можно задать любую другую ширину блока */
+    background: grey;
+    margin: .5rem;
+    display: flex;
+    
+  }
+
+  .row2 {
+      display: flex;
+      flex-flow: row nowrap;
+      flex-grow: 1;
+      align-self: baseline; 
+      
+
+  }
   
   .row {
       display: flex;
