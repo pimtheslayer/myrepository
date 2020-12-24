@@ -44,9 +44,48 @@
 
     outline: none;
     border: 1px solid #999;
-    resize: none;
+    resize: inherit;
     overflow: auto;
     padding: none;
     margin: none; 
 
   }
+
+
+  
+
+  @media (min-width:320px) {
+
+    .style__textarea {
+
+        outline: none;
+        border: 1px solid #999;
+        resize: inherit;
+        overflow: auto;
+        padding: none;
+        margin-left: 5%; 
+        width: 90%;
+      }
+
+    #getValue {
+
+        width:90%;
+        margin-left: 5%;
+      }
+
+    button {
+        margin-left: 35%;
+        margin-top: 5%;
+      }
+      
+    .style_text_p {
+            height: 20%;
+            width:10.4em;
+            margin-top: 1%;
+            margin-left: -2.5%;
+            font-size: 2.3vw;
+            word-wrap: break-word;
+        }
+    
+    }
+    
