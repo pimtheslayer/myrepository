@@ -15,9 +15,9 @@ let offset = 0; //сдвиг шифрования
 
 //достаем значение юзера с формы
 
-userInsert.addEventListener('submit', (e)=>{
+userInsert.addEventListener('submit', (e)=>{ //это обработчик событий, он принимает на себя событие на которое реагирует и ивент
 
-    e.preventDefault();
+    e.preventDefault(); //Тут мы прерывем дефолтное поведение события кнопки (перезагрузка страницы)
 
     offset = parseInt(getValue.value);
 
@@ -31,7 +31,7 @@ userInsert.addEventListener('submit', (e)=>{
 
 
 
-getIn.addEventListener('input', ()=>{
+getIn.addEventListener('input', ()=>{ //реагируем обработчиком события на ввод пользователя
     //шифруем
     //из кода в символ
     let str = getIn.value;
@@ -59,11 +59,11 @@ getIn.addEventListener('input', ()=>{
         let out = '';
         for(let i = 0; i<str.length;i++){
             let code = str.charCodeAt(i);
-            code = code-offset; //сдвигаем
+            code = code-offset;
             out+= String.fromCharCode(code);
         }
 
-        getOutUnencrypt.innerHTML = out;
+        getOutUnencrypt.innerHTML = out; //впихнули в блок
 
     });
 
